@@ -20,3 +20,7 @@ image:
 
 clean:
 	rm -fv openshift-api-proxy
+
+push: build
+	docker push bbklab/openshift-api-proxy:$(gitCommit)
+	docker push bbklab/openshift-api-proxy:latest
